@@ -1,0 +1,31 @@
+{
+  "name": "vsc-fab-speed-dial",
+  "description": "Awesome VSC FAB with Speed Dial",
+  "version": "0.1.0",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "authors": [
+    "valleweb"
+  ],
+  "main": "vsc-fab-speed-dial.html",
+  "homepage": "https://github.com/valleweb/vsc-fab-speed-dial",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/valleweb/vsc-fab-speed-dial"
+  },
+  "license": "https://github.com/valleweb/vsc-fab-speed-dial/blob/master/LICENSE.md",
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0"
+  },
+  "devDependencies": {
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0"
+  }
+}
