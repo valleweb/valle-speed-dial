@@ -13,10 +13,11 @@
 $ bower install vsc-fab-speed-dial --save
 ```
 
-2 -  Import the element:
+2 -  Import the elements:
 
 ```html
 <link rel="import" href="bower_components/vsc-fab-speed-dial/vsc-fab-speed-dial.html">
+<link rel="import" href="bower_components/vsc-fab-speed-dial/vsc-fab-speed-dial-action.html">
 ```
 
 3 - Start using it!
@@ -26,6 +27,7 @@ $ bower install vsc-fab-speed-dial --save
 <custom-element-demo>
   <template>
     <link rel="import" href="vsc-fab-speed-dial.html">
+    <link rel="import" href="vsc-fab-speed-dial-action.html">
     <next-code-block></next-code-block>
   </template>
 </custom-element-demo>
@@ -33,16 +35,24 @@ $ bower install vsc-fab-speed-dial --save
 -->
 
 ```html
-<vsc-fab-speed-dial></vsc-fab-speed-dial>
+<vsc-fab-speed-dial backdrop>
+  <vsc-fab-speed-dial-action label="copy" label-direction="left"></vsc-fab-speed-dial-action>
+  <vsc-fab-speed-dial-action label="print" label-direction="left"></vsc-fab-speed-dial-action>
+</vsc-fab-speed-dial>
 ```
 
-## Properties
+## `<vsc-fab-speed-dial>`
 
-Property  | Type        | Default   | Description
-:---      |:---         |:---       |:---
-`prop1`   | *String*    | `World`   | Prop description
+### Properties
 
-## Styling
+Property    | Type        | Default   | Description
+:---        |:---         |:---       |:---
+`direction` | *String*    | `up`      | Speed Dial direction (up / down / left / right)
+`backdrop`  | *Boolean*   | `false`   | Allow backdrop effect
+`label`     | *String*    | `''`      | Label for screen readers
+`icon`      | *String*    | `''`      | Custom icon url
+
+### Styling
 
 The following custom properties and mixins are available for styling:
 
@@ -51,6 +61,24 @@ Custom property                | Default  | Description
 --vsc-element-text-color       | #f44277  | Text color
 --vsc-element-text             | {}       | Text styles
 
+## `<vsc-fab-speed-dial-action>`
+
+### Properties
+
+Property          | Type        | Default   | Description
+:---              |:---         |:---       |:---
+`label-direction` | *String*    | `''`      | Allow floating label (left / right)
+`label`           | *String*    | `''`      | Text for  floating label and screen readers
+`icon`            | *String*    | `''`      | Custom icon url
+
+### Styling
+
+The following custom properties and mixins are available for styling:
+
+Custom property                | Default  | Description
+:---                           |:---      |:---
+--vsc-element-text-color       | #f44277  | Text color
+--vsc-element-text             | {}       | Text styles
 
 ## Browser Support
 

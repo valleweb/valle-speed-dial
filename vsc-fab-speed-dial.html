@@ -23,6 +23,7 @@
         position: absolute;
         z-index: 3;
         right: 8px;
+        bottom: 70px; /* direction up - Default value*/
       }
 
       :host([direction="down"]) .speed-dial {
@@ -61,7 +62,13 @@
 
     </style>
 
-    <vsc-fab-button toggle aria-haspopup="true" class="fab"></vsc-fab-button>
+    <vsc-fab-button
+      toggle
+      icon=[[icon]]
+      label=[[label]]
+      aria-haspopup="true"
+      class="fab">
+    </vsc-fab-button>
 
     <ul class="speed-dial">
       <slot></slot>
@@ -77,6 +84,19 @@
       connectedCallback() {
         super.connectedCallback();
         this.setAttribute('role', 'navigation');
+      }
+
+      static get properties() {
+        return {
+          label: {
+            type: String,
+            value: ''
+          },
+          icon: {
+            type: String,
+            value: ''
+          }
+        }
       }
 
     }
