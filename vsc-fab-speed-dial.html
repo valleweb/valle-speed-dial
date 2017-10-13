@@ -52,7 +52,7 @@
         flex-direction: row;
       }
 
-      :host([backdrop])::after {
+      :host(.backdrop[backdrop])::after {
         content: '';
         position: fixed;
         z-index: 1;
@@ -62,6 +62,16 @@
         width: 100vw;
         height: 100vh;
         background-color: var(--vsc-fab-speed-dial-backdrop-color, rgba(0,0,0,.8));
+        animation: fade .2s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0;
+        },
+        to {
+          opacity: 1;
+        }
       }
 
     </style>
@@ -98,9 +108,15 @@
       }
 
       _toggleShow() {
-        this.$.speedDial.style.display == 'none'
-        ? this.$.speedDial.style.display = 'flex'
-        : this.$.speedDial.style.display = 'none'
+
+        if(this.$.speedDial.style.display == 'none') {
+          this.$.speedDial.style.display = 'flex'
+          this.classList.add('backdrop');
+        } else {
+          this.$.speedDial.style.display = 'none'
+          this.classList.remove('backdrop');
+        }
+
       }
 
       static get properties() {
@@ -112,7 +128,11 @@
           icon: {
             type: String,
             value: ''
-          }
+          },
+          backdrop: {
+            type: Boolean,
+            value: true
+          },
         }
       }
 

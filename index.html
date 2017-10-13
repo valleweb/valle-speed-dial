@@ -34,9 +34,28 @@
       <demo-snippet class="centered-demo">
         <template>
 
-          <vsc-fab-speed-dial direction="down">
-            <vsc-fab-speed-dial-action label="copy" label-direction="left"></vsc-fab-speed-dial-action>
-            <vsc-fab-speed-dial-action label="print" label-direction="left"></vsc-fab-speed-dial-action>
+          <style is="custom-style">
+            .unicorn {
+              --vsc-fab-speed-dial-action-fab-color: #d4f442;
+            }
+          </style>
+
+          <vsc-fab-speed-dial direction="down" backdrop>
+
+            <vsc-fab-speed-dial-action
+              label="copy"
+              label-direction="right"
+              icon="https://uploaddeimagens.com.br/images/001/071/867/full/iconmonstr-fast-food-3-32.png"
+              class="unicorn">
+            </vsc-fab-speed-dial-action>
+
+            <vsc-fab-speed-dial-action
+              label="print"
+              label-direction="right"
+              icon="https://uploaddeimagens.com.br/images/001/071/867/full/iconmonstr-fast-food-3-32.png"
+              class="unicorn">
+            </vsc-fab-speed-dial-action>
+
           </vsc-fab-speed-dial>
 
         </template>
@@ -51,8 +70,8 @@
         <template>
 
           <vsc-fab-speed-dial direction="up">
-            <vsc-fab-speed-dial-action label="copy" label-direction="right"></vsc-fab-speed-dial-action>
-            <vsc-fab-speed-dial-action label="print" label-direction="right"></vsc-fab-speed-dial-action>
+            <vsc-fab-speed-dial-action label="copy" label-direction="left"></vsc-fab-speed-dial-action>
+            <vsc-fab-speed-dial-action label="print" label-direction="left"></vsc-fab-speed-dial-action>
           </vsc-fab-speed-dial>
 
         </template>
