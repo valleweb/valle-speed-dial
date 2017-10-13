@@ -25,47 +25,62 @@
     <main class="vertical-section-container centered">
       <h1>vsc-fab-speed-dial demo</h1>
 
-      <!-- Default - demo
+      <!-- Direction down - demo
       ========================= -->
 
-      <h2>Default</h2>
+      <h2>Direction down</h2>
 
       <demo-snippet class="centered-demo">
         <template>
 
-          <vsc-fab-speed-dial></vsc-fab-speed-dial>
+          <vsc-fab-speed-dial
+            direction="down"
+            label-direction="right">
+          </vsc-fab-speed-dial>
 
         </template>
       </demo-snippet>
 
-      <!-- With Prop - demo
+      <!-- Direction up - demo
       ========================= -->
 
-      <h2>With Prop</h2>
+      <h2>Direction up</h2>
 
       <demo-snippet class="centered-demo">
         <template>
 
-          <vsc-fab-speed-dial prop1="Human"></vsc-fab-speed-dial>
+          <vsc-fab-speed-dial
+            direction="up"
+            label-direction="left">
+          </vsc-fab-speed-dial>
 
         </template>
       </demo-snippet>
 
-      <!-- Custom style - demo
+      <!-- Direction left - demo
       ========================= -->
 
-      <h2>Custom style</h2>
+      <h2>Direction left</h2>
 
       <demo-snippet class="centered-demo">
         <template>
 
-        <style is="custom-style">
-          .shiny {
-            --vsc-element-text-color: #a1f442;
-          }
-        </style>
+          <vsc-fab-speed-dial direction="left">
+          </vsc-fab-speed-dial>
 
-          <vsc-fab-speed-dial class="shiny"></vsc-fab-speed-dial>
+        </template>
+      </demo-snippet>
+
+      <!-- Direction right - demo
+      ========================= -->
+
+      <h2>Direction right</h2>
+
+      <demo-snippet class="centered-demo">
+        <template>
+
+          <vsc-fab-speed-dial direction="right">
+          </vsc-fab-speed-dial>
 
         </template>
       </demo-snippet>

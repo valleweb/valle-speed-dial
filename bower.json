@@ -21,7 +21,8 @@
     "bower_components"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^2.0.0"
+    "polymer": "Polymer/polymer#^2.0.0",
+    "vsc-fab-button": "^0.1.1"
   },
   "devDependencies": {
     "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
