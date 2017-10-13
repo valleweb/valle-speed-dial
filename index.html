@@ -10,6 +10,7 @@
     <link rel="import" href="../iron-demo-helpers/demo-snippet.html">
     <link rel="import" href="../iron-demo-helpers/demo-pages-shared-styles.html">
     <link rel="import" href="vsc-fab-speed-dial.html">
+    <link rel="import" href="vsc-fab-speed-dial-action.html">
   </head>
 
   <body>
@@ -33,9 +34,9 @@
       <demo-snippet class="centered-demo">
         <template>
 
-          <vsc-fab-speed-dial
-            direction="down"
-            label-direction="right">
+          <vsc-fab-speed-dial direction="down">
+            <vsc-fab-speed-dial-action label="copy" label-direction="left"></vsc-fab-speed-dial-action>
+            <vsc-fab-speed-dial-action label="print" label-direction="left"></vsc-fab-speed-dial-action>
           </vsc-fab-speed-dial>
 
         </template>
@@ -49,9 +50,9 @@
       <demo-snippet class="centered-demo">
         <template>
 
-          <vsc-fab-speed-dial
-            direction="up"
-            label-direction="left">
+          <vsc-fab-speed-dial direction="up">
+            <vsc-fab-speed-dial-action label="copy" label-direction="right"></vsc-fab-speed-dial-action>
+            <vsc-fab-speed-dial-action label="print" label-direction="right"></vsc-fab-speed-dial-action>
           </vsc-fab-speed-dial>
 
         </template>
@@ -66,6 +67,8 @@
         <template>
 
           <vsc-fab-speed-dial direction="left">
+            <vsc-fab-speed-dial-action></vsc-fab-speed-dial-action>
+            <vsc-fab-speed-dial-action></vsc-fab-speed-dial-action>
           </vsc-fab-speed-dial>
 
         </template>
@@ -80,6 +83,8 @@
         <template>
 
           <vsc-fab-speed-dial direction="right">
+            <vsc-fab-speed-dial-action></vsc-fab-speed-dial-action>
+            <vsc-fab-speed-dial-action></vsc-fab-speed-dial-action>
           </vsc-fab-speed-dial>
 
         </template>
