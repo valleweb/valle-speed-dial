@@ -24,6 +24,8 @@
         z-index: 3;
         right: 8px;
         bottom: 70px; /* direction up - Default value*/
+        display: flex;
+        flex-direction: column;
       }
 
       :host([direction="down"]) .speed-dial {
@@ -37,15 +39,14 @@
       :host([direction="left"]) .speed-dial {
         top: 10px;
         right: 70px;
-        display: flex;
-        justify-content: flex-start;
+        flex-direction: row;
       }
 
       :host([direction="right"]) .speed-dial {
         top: 10px;
         left: 70px;
         display: flex;
-        justify-content: flex-start;
+        flex-direction: row;
       }
 
       :host([backdrop])::after {
@@ -67,10 +68,11 @@
       icon=[[icon]]
       label=[[label]]
       aria-haspopup="true"
-      class="fab">
+      class="fab"
+      id="fab">
     </vsc-fab-button>
 
-    <ul class="speed-dial">
+    <ul class="speed-dial" id="speedDial" style="display: none;">
       <slot></slot>
     </ul>
 
@@ -83,7 +85,19 @@
 
       connectedCallback() {
         super.connectedCallback();
+
         this.setAttribute('role', 'navigation');
+
+        Polymer.RenderStatus.afterNextRender(this, () => {
+          this.$.fab.addEventListener('click', this._toggleShow.bind(this));
+        });
+
+      }
+
+      _toggleShow() {
+        this.$.speedDial.style.display == 'none'
+        ? this.$.speedDial.style.display = 'flex'
+        : this.$.speedDial.style.display = 'none'
       }
 
       static get properties() {
