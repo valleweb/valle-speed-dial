@@ -11,12 +11,17 @@
         position: relative;
       }
 
+      .fab {
+        position: relative;
+        z-index: 2;
+      }
+
       .speed-dial {
         padding-left: 0;
         margin-top: 0;
         margin-bottom: 0;
         position: absolute;
-        z-index: 999;
+        z-index: 3;
         right: 8px;
       }
 
@@ -42,9 +47,21 @@
         justify-content: flex-start;
       }
 
+      :host([backdrop])::after {
+        content: '';
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,.8);
+      }
+
     </style>
 
-    <vsc-fab-button toggle aria-haspopup="true"></vsc-fab-button>
+    <vsc-fab-button toggle aria-haspopup="true" class="fab"></vsc-fab-button>
 
     <ul class="speed-dial">
       <slot></slot>
