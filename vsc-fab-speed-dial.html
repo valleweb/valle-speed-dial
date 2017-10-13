@@ -14,6 +14,9 @@
       .fab {
         position: relative;
         z-index: 2;
+        --vsc-fab-button-color: var(--vsc-fab-speed-dial-fab-color, #00b0ba);
+        --vsc-fab-button-default-icon-color: var(--vsc-fab-speed-dial-default-icon-color, #ffffff);
+        --vsc-fab-button-pressed-color: var(--vsc-fab-speed-dial-pressed-color, #00676d);
       }
 
       .speed-dial {
@@ -58,7 +61,7 @@
         display: block;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(0,0,0,.8);
+        background-color: var(--vsc-fab-speed-dial-backdrop-color, rgba(0,0,0,.8));
       }
 
     </style>

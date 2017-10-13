@@ -56,10 +56,12 @@ Property    | Type        | Default   | Description
 
 The following custom properties and mixins are available for styling:
 
-Custom property                | Default  | Description
-:---                           |:---      |:---
---vsc-element-text-color       | #f44277  | Text color
---vsc-element-text             | {}       | Text styles
+Custom property                         | Default        | Description
+:---                                    |:---            |:---
+--vsc-fab-speed-dial-fab-color          | #00b0ba        | Toggle button background color
+--vsc-fab-speed-dial-pressed-color      | #00676d        | Toggle button background color (Pressed)
+--vsc-fab-speed-dial-default-icon-color | #ffffff        | Toggle button default icon color
+--vsc-fab-speed-dial-backdrop-color     | rgba(0,0,0,.8) | Backdrop color
 
 ## `<vsc-fab-speed-dial-action>`
 
@@ -75,10 +77,13 @@ Property          | Type        | Default   | Description
 
 The following custom properties and mixins are available for styling:
 
-Custom property                | Default  | Description
-:---                           |:---      |:---
---vsc-element-text-color       | #f44277  | Text color
---vsc-element-text             | {}       | Text styles
+Custom property                                | Default  | Description
+:---                                           |:---      |:---
+--vsc-fab-speed-dial-action-fab-color          | #00b0ba  | Mini button background color
+--vsc-fab-speed-dial-action-default-icon-color | #ffffff  | Mini button default icon color
+--vsc-fab-speed-dial-action-label-bg-color     | #f5f5f5  | Float label background color
+--vsc-fab-speed-dial-action-label-text-color   | #000000  | Float label text color
+--vsc-fab-speed-dial-action-label              | {}       | Float label `@apply` mixin
 
 ## Browser Support
 
