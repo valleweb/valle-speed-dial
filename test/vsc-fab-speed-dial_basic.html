@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>vsc-fab-speed-dial basic tests</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../../polymer/polymer.html">
+    <link rel="import" href="../vsc-fab-speed-dial.html">
+  </head>
+  <body>
+
+    <test-fixture id="basicSpeedDial">
+      <template>
+        <vsc-fab-speed-dial></vsc-fab-speed-dial>
+      </template>
+    </test-fixture>
+
+    <test-fixture id="backdropSpeedDial">
+      <template>
+        <vsc-fab-speed-dial backdrop></vsc-fab-speed-dial>
+      </template>
+    </test-fixture>
+
+    <test-fixture id="toogleSpeedDial">
+      <template>
+        <vsc-fab-speed-dial></vsc-fab-speed-dial>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('vsc-fab-speed-dial', () => {
+
+        let basicSpeedDial,
+            backdropSpeedDial,
+            toogleSpeedDial;
+
+        setup(() => {
+          basicSpeedDial = fixture('basicSpeedDial');
+          backdropSpeedDial = fixture('backdropSpeedDial');
+          toogleSpeedDial = fixture('toogleSpeedDial');
+        });
+
+        test('Should render a default FAB Speed Dial', () => {
+
+          const fab = basicSpeedDial.shadowRoot.querySelector('vsc-fab-button');
+          const speedDial = basicSpeedDial.shadowRoot.querySelector('ul');
+          const hasClass = basicSpeedDial.classList.contains('backdrop');
+          const hasProperty = basicSpeedDial.backdrop;
+
+          expect(fab.nodeName).to.be.equal('VSC-FAB-BUTTON');
+          expect(speedDial.nodeName).to.be.equal('UL');
+          expect(speedDial.style.display).to.be.equal('none');
+          assert.isFalse(hasProperty);
+          assert.isFalse(hasClass);
+
+        });
+
+        test('Should render a FAB Speed Dial with backdrop', () => {
+
+          const hasProperty = backdropSpeedDial.backdrop;
+          assert.isTrue(hasProperty);
+
+        });
+
+        test('Should add and remove .backdrop class when click', (done) => {
+
+          const fab = backdropSpeedDial.shadowRoot.querySelector('vsc-fab-button');
+          const hasClassBeforeClick = backdropSpeedDial.classList.contains('backdrop');
+
+          assert.isFalse(hasClassBeforeClick);
+
+          // For work with Polymer.RenderStatus.afterNextRender :)
+          setTimeout(() => {
+
+            fab.click();
+
+            const hasClassAfterClick = backdropSpeedDial.classList.contains('backdrop');
+            assert.isTrue(hasClassAfterClick);
+
+            done();
+
+          }, 100);
+
+        });
+
+        test('Should show and hide (Toggle) the Speed Dial when click', (done) => {
+
+          const fab = toogleSpeedDial.shadowRoot.querySelector('vsc-fab-button');
+          const speedDial = toogleSpeedDial.shadowRoot.querySelector('ul');
+
+          // For work with Polymer.RenderStatus.afterNextRender :)
+          setTimeout(() => {
+
+            expect(speedDial.style.display).to.be.equal('none');
+
+            fab.click();
+
+            expect(speedDial.style.display).to.be.equal('flex');
+
+            fab.click();
+
+            expect(speedDial.style.display).to.be.equal('none');
+
+            done();
+
+          }, 100);
+
+        });
+
+      });
+    </script>
+
+  </body>
+</html>
