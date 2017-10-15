@@ -28,6 +28,11 @@ $ bower install vsc-fab-speed-dial --save
   <template>
     <link rel="import" href="vsc-fab-speed-dial.html">
     <link rel="import" href="vsc-fab-speed-dial-action.html">
+    <style is="custom-style">
+      vsc-fab-speed-dial-action {
+        --vsc-fab-speed-dial-action-fab-color: #d4f442;
+      }
+    </style>
     <next-code-block></next-code-block>
   </template>
 </custom-element-demo>
