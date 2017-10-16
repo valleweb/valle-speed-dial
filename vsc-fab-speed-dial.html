@@ -109,11 +109,22 @@
 
       _toggleShow() {
 
-        if(this.$.speedDial.style.display == 'none') {
-          this.$.speedDial.style.display = 'flex'
+        this.$.speedDial.style.display == 'none'
+        ? this.setAttribute('open', '')
+        : this.removeAttribute('open')
+
+      }
+
+      _openToggleObserver(newBooleanValue) {
+
+        if(newBooleanValue) {
+          this.$.fab.setAttribute('pressed', '');
+          this.$.speedDial.style.display = 'flex';
           this.classList.add('backdrop');
         } else {
-          this.$.speedDial.style.display = 'none'
+          this.$.fab.removeAttribute('pressed');
+          this.$.fab.pressed = false;
+          this.$.speedDial.style.display = 'none';
           this.classList.remove('backdrop');
         }
 
@@ -128,6 +139,11 @@
           icon: {
             type: String,
             value: ''
+          },
+          open: {
+            type: Boolean,
+            value: false,
+            observer: '_openToggleObserver'
           },
           backdrop: {
             type: Boolean,

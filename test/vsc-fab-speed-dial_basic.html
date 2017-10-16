@@ -32,17 +32,25 @@
       </template>
     </test-fixture>
 
+    <test-fixture id="openSpeedDial">
+      <template>
+        <vsc-fab-speed-dial open></vsc-fab-speed-dial>
+      </template>
+    </test-fixture>
+
     <script>
       suite('vsc-fab-speed-dial', () => {
 
         let basicSpeedDial,
             backdropSpeedDial,
-            toogleSpeedDial;
+            toogleSpeedDial,
+            openSpeedDial;
 
         setup(() => {
           basicSpeedDial = fixture('basicSpeedDial');
           backdropSpeedDial = fixture('backdropSpeedDial');
           toogleSpeedDial = fixture('toogleSpeedDial');
+          openSpeedDial = fixture('openSpeedDial');
         });
 
         test('Should render a default FAB Speed Dial', () => {
@@ -109,6 +117,27 @@
             done();
 
           }, 100);
+
+        });
+
+        test('Should render a open Speed Dial', () => {
+
+          const speedDial = openSpeedDial.shadowRoot.querySelector('ul');
+
+          assert.isTrue(openSpeedDial.open);
+          expect(speedDial.style.display).to.be.equal('flex');
+
+        });
+
+        test('Should toggle open state using the javascript API', () => {
+
+          const speedDial = basicSpeedDial.shadowRoot.querySelector('ul');
+
+          basicSpeedDial.open = true;
+          expect(speedDial.style.display).to.be.equal('flex');
+
+          basicSpeedDial.open = false;
+          expect(speedDial.style.display).to.be.equal('none');
 
         });
 
