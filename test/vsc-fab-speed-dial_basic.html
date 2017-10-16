@@ -134,9 +134,13 @@
           const speedDial = basicSpeedDial.shadowRoot.querySelector('ul');
 
           basicSpeedDial.open = true;
+
+          assert.isTrue(basicSpeedDial.hasAttribute('open'));
           expect(speedDial.style.display).to.be.equal('flex');
 
           basicSpeedDial.open = false;
+
+          assert.isFalse(basicSpeedDial.hasAttribute('open'));
           expect(speedDial.style.display).to.be.equal('none');
 
         });

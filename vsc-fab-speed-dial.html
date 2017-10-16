@@ -123,7 +123,6 @@
           this.classList.add('backdrop');
         } else {
           this.$.fab.removeAttribute('pressed');
-          this.$.fab.pressed = false;
           this.$.speedDial.style.display = 'none';
           this.classList.remove('backdrop');
         }
@@ -143,7 +142,8 @@
           open: {
             type: Boolean,
             value: false,
-            observer: '_openToggleObserver'
+            observer: '_openToggleObserver',
+            reflectToAttribute: true
           },
           backdrop: {
             type: Boolean,
