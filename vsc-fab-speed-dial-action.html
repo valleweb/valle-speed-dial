@@ -1,5 +1,5 @@
 <link rel="import" href="../polymer/polymer-element.html">
-<link rel="import" href="../vsc-fab-button/vsc-fab-button.html">
+<link rel="import" href="../valle-fab/valle-fab.html">
 
 <dom-module id="vsc-fab-speed-dial-action">
   <template>
@@ -12,8 +12,8 @@
       }
 
       .mini-fab {
-        --vsc-fab-button-color: var(--vsc-fab-speed-dial-action-fab-color, #00b0ba);
-        --vsc-fab-button-default-icon-color: var(--vsc-fab-speed-dial-action-default-icon-color, #ffffff);
+        --valle-fab-color: var(--vsc-fab-speed-dial-action-fab-color, #00b0ba);
+        --valle-fab-default-icon-color: var(--vsc-fab-speed-dial-action-default-icon-color, #ffffff);
       }
 
       .label {
@@ -42,7 +42,7 @@
     </style>
 
     <span class="label">[[label]]</span>
-    <vsc-fab-button mini label=[[label]] icon=[[icon]] class="mini-fab"></vsc-fab-button>
+    <valle-fab mini label=[[label]] icon=[[icon]] class="mini-fab"></valle-fab>
 
   </template>
 

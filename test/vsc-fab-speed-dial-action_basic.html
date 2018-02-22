@@ -31,10 +31,10 @@
 
         test('Should render a default FAB Speed Dial Action', () => {
 
-          const fab = basicSpeedDialAction.shadowRoot.querySelector('vsc-fab-button');
+          const fab = basicSpeedDialAction.shadowRoot.querySelector('valle-fab');
           const label = basicSpeedDialAction.shadowRoot.querySelector('span');
 
-          expect(fab.nodeName).to.be.equal('VSC-FAB-BUTTON');
+          expect(fab.nodeName).to.be.equal('VALLE-FAB');
           expect(label.nodeName).to.be.equal('SPAN');
 
           expect(label.textContent).to.be.equal('awesome');
