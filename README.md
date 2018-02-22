@@ -128,8 +128,8 @@ Go to [localhost:8080/components/valle-speed-dial/](http://localhost:8080/compon
 Linting with eslint:
 
 ```sh
-$ [sudo] npm install -g eslint
-$ [sudo] npm install -g eslint-plugin-html
+$ [sudo] yarn global add eslint
+$ [sudo] yarn global add eslint-plugin-html
 
 $ eslint *.html
 ```
@@ -145,7 +145,7 @@ $ polymer lint
 Install the Web Component Tester (WCT) test runner:
 
 ```sh
-$ [sudo] npm install -g web-component-tester
+$ [sudo] yarn global add web-component-tester
 ```
 
 Run tests:
