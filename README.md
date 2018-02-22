@@ -103,7 +103,7 @@ Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 11+ | Latest ✔
 1 - Install [Bower](http://bower.io/) & [Polymer-CLI](https://www.polymer-project.org/1.0/docs/tools/polymer-cli):
 
 ```sh
-$ [sudo] npm install -g bower polymer-cli
+$ [sudo] yarn global add bower polymer-cli
 ```
 
 2 - Install local dependencies:
