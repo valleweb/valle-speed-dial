@@ -1,5 +1,5 @@
 {
-  "name": "vsc-fab-speed-dial",
+  "name": "valle-speed-dial",
   "description": "Awesome VSC FAB with Speed Dial",
   "version": "0.1.0",
   "keywords": [
@@ -9,13 +9,13 @@
   "authors": [
     "valleweb"
   ],
-  "main": "vsc-fab-speed-dial.html",
-  "homepage": "https://github.com/valleweb/vsc-fab-speed-dial",
+  "main": "valle-speed-dial.html",
+  "homepage": "https://github.com/valleweb/valle-speed-dial",
   "repository": {
     "type": "git",
-    "url": "git://github.com/valleweb/vsc-fab-speed-dial"
+    "url": "git://github.com/valleweb/valle-speed-dial"
   },
-  "license": "https://github.com/valleweb/vsc-fab-speed-dial/blob/master/LICENSE.md",
+  "license": "https://github.com/valleweb/valle-speed-dial/blob/master/LICENSE.md",
   "ignore": [
     "**/.*",
     "bower_components"

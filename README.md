@@ -1,23 +1,23 @@
-# vsc-fab-speed-dial
+# valle-speed-dial
 
-> Awesome VSC FAB with Speed Dial
+> Awesome valle FAB with Speed Dial
 
-[![Travis CI Status](https://travis-ci.org/valleweb/vsc-fab-speed-dial.svg?branch=master)](https://travis-ci.org/valleweb/vsc-fab-speed-dial)
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/valleweb/vsc-fab-speed-dial)
+[![Travis CI Status](https://travis-ci.org/valleweb/valle-speed-dial.svg?branch=master)](https://travis-ci.org/valleweb/valle-speed-dial)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/valleweb/valle-speed-dial)
 
 ## How to install and use:
 
 1 - Install the element using [Bower](http://bower.io/):
 
 ```sh
-$ bower install vsc-fab-speed-dial --save
+$ bower install valle-speed-dial --save
 ```
 
 2 -  Import the elements:
 
 ```html
-<link rel="import" href="bower_components/vsc-fab-speed-dial/vsc-fab-speed-dial.html">
-<link rel="import" href="bower_components/vsc-fab-speed-dial/vsc-fab-speed-dial-action.html">
+<link rel="import" href="bower_components/valle-speed-dial/valle-speed-dial.html">
+<link rel="import" href="bower_components/valle-speed-dial/valle-speed-dial-action.html">
 ```
 
 3 - Start using it!
@@ -26,11 +26,11 @@ $ bower install vsc-fab-speed-dial --save
 ```
 <custom-element-demo>
   <template>
-    <link rel="import" href="vsc-fab-speed-dial.html">
-    <link rel="import" href="vsc-fab-speed-dial-action.html">
+    <link rel="import" href="valle-speed-dial.html">
+    <link rel="import" href="valle-speed-dial-action.html">
     <style is="custom-style">
-      vsc-fab-speed-dial-action {
-        --vsc-fab-speed-dial-action-fab-color: #d4f442;
+      valle-speed-dial-action {
+        --valle-speed-dial-action-fab-color: #d4f442;
       }
     </style>
     <next-code-block></next-code-block>
@@ -40,13 +40,13 @@ $ bower install vsc-fab-speed-dial --save
 -->
 
 ```html
-<vsc-fab-speed-dial backdrop>
-  <vsc-fab-speed-dial-action label="copy" label-direction="left"></vsc-fab-speed-dial-action>
-  <vsc-fab-speed-dial-action label="print" label-direction="left"></vsc-fab-speed-dial-action>
-</vsc-fab-speed-dial>
+<valle-speed-dial backdrop>
+  <valle-speed-dial-action label="copy" label-direction="left"></valle-speed-dial-action>
+  <valle-speed-dial-action label="print" label-direction="left"></valle-speed-dial-action>
+</valle-speed-dial>
 ```
 
-## `<vsc-fab-speed-dial>`
+## `<valle-speed-dial>`
 
 ### Properties
 
@@ -63,12 +63,12 @@ The following custom properties and mixins are available for styling:
 
 Custom property                         | Default        | Description
 :---                                    |:---            |:---
---vsc-fab-speed-dial-fab-color          | #00b0ba        | Toggle button background color
---vsc-fab-speed-dial-pressed-color      | #00676d        | Toggle button background color (Pressed)
---vsc-fab-speed-dial-default-icon-color | #ffffff        | Toggle button default icon color
---vsc-fab-speed-dial-backdrop-color     | rgba(0,0,0,.8) | Backdrop color
+--valle-speed-dial-fab-color          | #00b0ba        | Toggle button background color
+--valle-speed-dial-pressed-color      | #00676d        | Toggle button background color (Pressed)
+--valle-speed-dial-default-icon-color | #ffffff        | Toggle button default icon color
+--valle-speed-dial-backdrop-color     | rgba(0,0,0,.8) | Backdrop color
 
-## `<vsc-fab-speed-dial-action>`
+## `<valle-speed-dial-action>`
 
 ### Properties
 
@@ -84,11 +84,11 @@ The following custom properties and mixins are available for styling:
 
 Custom property                                | Default  | Description
 :---                                           |:---      |:---
---vsc-fab-speed-dial-action-fab-color          | #00b0ba  | Mini button background color
---vsc-fab-speed-dial-action-default-icon-color | #ffffff  | Mini button default icon color
---vsc-fab-speed-dial-action-label-bg-color     | #f5f5f5  | Float label background color
---vsc-fab-speed-dial-action-label-text-color   | #000000  | Float label text color
---vsc-fab-speed-dial-action-label              | {}       | Float label `@apply` mixin
+--valle-speed-dial-action-fab-color          | #00b0ba  | Mini button background color
+--valle-speed-dial-action-default-icon-color | #ffffff  | Mini button default icon color
+--valle-speed-dial-action-label-bg-color     | #f5f5f5  | Float label background color
+--valle-speed-dial-action-label-text-color   | #000000  | Float label text color
+--valle-speed-dial-action-label              | {}       | Float label `@apply` mixin
 
 ## Browser Support
 
@@ -118,7 +118,7 @@ $ bower install
 $ polymer serve
 ```
 
-Go to [localhost:8080/components/vsc-fab-speed-dial/](http://localhost:8080/components/vsc-fab-speed-dial/)
+Go to [localhost:8080/components/valle-speed-dial/](http://localhost:8080/components/valle-speed-dial/)
 
 
 ## Tests
@@ -160,14 +160,14 @@ To keep better organization of releases we follow the [Semantic Versioning 2.0.0
 
 ## Contributing
 
-Find on our [issues](https://github.com/valleweb/vsc-fab-speed-dial/issues/) the next steps of the project ;)
+Find on our [issues](https://github.com/valleweb/valle-speed-dial/issues/) the next steps of the project ;)
 <br>
-Want to contribute? [Follow these recommendations](https://github.com/valleweb/vsc-fab-speed-dial/blob/master/CONTRIBUTING.md).
+Want to contribute? [Follow these recommendations](https://github.com/valleweb/valle-speed-dial/blob/master/CONTRIBUTING.md).
 
 ## History
 
-See [Releases](https://github.com/valleweb/vsc-fab-speed-dial/releases) for detailed changelog.
+See [Releases](https://github.com/valleweb/valle-speed-dial/releases) for detailed changelog.
 
 ## License
 
-[MIT License](https://github.com/valleweb/vsc-fab-speed-dial/blob/master/LICENSE.md) © [valleweb](https://github.com/orgs/valleweb/people)
+[MIT License](https://github.com/valleweb/valle-speed-dial/blob/master/LICENSE.md) © [valleweb](https://github.com/orgs/valleweb/people)

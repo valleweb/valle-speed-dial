@@ -1,7 +1,7 @@
 <link rel="import" href="../polymer/polymer-element.html">
 <link rel="import" href="../valle-fab/valle-fab.html">
 
-<dom-module id="vsc-fab-speed-dial-action">
+<dom-module id="valle-speed-dial-action">
   <template>
 
     <style>
@@ -12,8 +12,8 @@
       }
 
       .mini-fab {
-        --valle-fab-color: var(--vsc-fab-speed-dial-action-fab-color, #00b0ba);
-        --valle-fab-default-icon-color: var(--vsc-fab-speed-dial-action-default-icon-color, #ffffff);
+        --valle-fab-color: var(--valle-speed-dial-action-fab-color, #00b0ba);
+        --valle-fab-default-icon-color: var(--valle-speed-dial-action-default-icon-color, #ffffff);
       }
 
       .label {
@@ -21,12 +21,12 @@
                     0 1px 5px 0 rgba(0, 0, 0, 0.12),
                     0 3px 1px -2px rgba(0, 0, 0, 0.2);
         padding: 6px 10px;
-        background-color: var(--vsc-fab-speed-dial-action-label-bg-color, #f5f5f5);
-        color: var(--vsc-fab-speed-dial-action-label-text-color, #000000);
+        background-color: var(--valle-speed-dial-action-label-bg-color, #f5f5f5);
+        color: var(--valle-speed-dial-action-label-text-color, #000000);
         position: absolute;
         top: 14px;
         display: none;
-        @apply --vsc-fab-speed-dial-action-label;
+        @apply --valle-speed-dial-action-label;
       }
 
       :host([label-direction="left"]) .label {
@@ -49,7 +49,7 @@
   <script>
     class vscFabSpeedDialAction extends Polymer.Element {
 
-      static get is() { return 'vsc-fab-speed-dial-action'; }
+      static get is() { return 'valle-speed-dial-action'; }
 
       connectedCallback() {
         super.connectedCallback();

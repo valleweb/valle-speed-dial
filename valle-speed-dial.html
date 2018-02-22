@@ -1,7 +1,7 @@
 <link rel="import" href="../polymer/polymer-element.html">
 <link rel="import" href="../valle-fab/valle-fab.html">
 
-<dom-module id="vsc-fab-speed-dial">
+<dom-module id="valle-speed-dial">
   <template>
 
     <style>
@@ -14,9 +14,9 @@
       .fab {
         position: relative;
         z-index: 2;
-        --valle-fab-color: var(--vsc-fab-speed-dial-fab-color, #00b0ba);
-        --valle-fab-default-icon-color: var(--vsc-fab-speed-dial-default-icon-color, #ffffff);
-        --valle-fab-pressed-color: var(--vsc-fab-speed-dial-pressed-color, #00676d);
+        --valle-fab-color: var(--valle-speed-dial-fab-color, #00b0ba);
+        --valle-fab-default-icon-color: var(--valle-speed-dial-default-icon-color, #ffffff);
+        --valle-fab-pressed-color: var(--valle-speed-dial-pressed-color, #00676d);
       }
 
       .speed-dial {
@@ -61,7 +61,7 @@
         display: block;
         width: 100vw;
         height: 100vh;
-        background-color: var(--vsc-fab-speed-dial-backdrop-color, rgba(0,0,0,.8));
+        background-color: var(--valle-speed-dial-backdrop-color, rgba(0,0,0,.8));
         animation: fade .2s;
       }
 
@@ -92,9 +92,9 @@
   </template>
 
   <script>
-    class vscFabSpeedDial extends Polymer.Element {
+    class valleSpeedDial extends Polymer.Element {
 
-      static get is() { return 'vsc-fab-speed-dial'; }
+      static get is() { return 'valle-speed-dial'; }
 
       connectedCallback() {
         super.connectedCallback();
@@ -154,6 +154,6 @@
 
     }
 
-    window.customElements.define(vscFabSpeedDial.is, vscFabSpeedDial);
+    window.customElements.define(valleSpeedDial.is, valleSpeedDial);
   </script>
 </dom-module>
