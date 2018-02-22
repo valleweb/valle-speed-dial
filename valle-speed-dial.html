@@ -100,10 +100,7 @@
         super.connectedCallback();
 
         this.setAttribute('role', 'navigation');
-
-        Polymer.RenderStatus.afterNextRender(this, () => {
-          this.$.fab.addEventListener('click', this._toggleShow.bind(this));
-        });
+        this.$.fab.addEventListener('click', this._toggleShow.bind(this));
 
       }
 

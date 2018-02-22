@@ -75,48 +75,34 @@
 
         });
 
-        test('Should add and remove .backdrop class when click', (done) => {
+        test('Should add and remove .backdrop class when click', () => {
 
           const fab = backdropSpeedDial.shadowRoot.querySelector('valle-fab');
           const hasClassBeforeClick = backdropSpeedDial.classList.contains('backdrop');
 
           assert.isFalse(hasClassBeforeClick);
 
-          // For work with Polymer.RenderStatus.afterNextRender :)
-          setTimeout(() => {
+          fab.click();
 
-            fab.click();
-
-            const hasClassAfterClick = backdropSpeedDial.classList.contains('backdrop');
-            assert.isTrue(hasClassAfterClick);
-
-            done();
-
-          }, 100);
+          const hasClassAfterClick = backdropSpeedDial.classList.contains('backdrop');
+          assert.isTrue(hasClassAfterClick);
 
         });
 
-        test('Should show and hide (Toggle) the Speed Dial when click', (done) => {
+        test('Should show and hide (Toggle) the Speed Dial when click', () => {
 
           const fab = toogleSpeedDial.shadowRoot.querySelector('valle-fab');
           const speedDial = toogleSpeedDial.shadowRoot.querySelector('ul');
 
-          // For work with Polymer.RenderStatus.afterNextRender :)
-          setTimeout(() => {
+          expect(speedDial.style.display).to.be.equal('none');
 
-            expect(speedDial.style.display).to.be.equal('none');
+          fab.click();
 
-            fab.click();
+          expect(speedDial.style.display).to.be.equal('flex');
 
-            expect(speedDial.style.display).to.be.equal('flex');
+          fab.click();
 
-            fab.click();
-
-            expect(speedDial.style.display).to.be.equal('none');
-
-            done();
-
-          }, 100);
+          expect(speedDial.style.display).to.be.equal('none');
 
         });
 
