@@ -1,7 +1,7 @@
 {
-  "name": "vsc-fab-speed-dial",
-  "description": "Awesome VSC FAB with Speed Dial",
-  "version": "0.1.0",
+  "name": "valle-speed-dial",
+  "description": "Awesome valle FAB with Speed Dial",
+  "version": "1.0.0",
   "keywords": [
     "polymer",
     "web-components"
@@ -9,13 +9,13 @@
   "authors": [
     "valleweb"
   ],
-  "main": "vsc-fab-speed-dial.html",
-  "homepage": "https://github.com/valleweb/vsc-fab-speed-dial",
+  "main": "valle-speed-dial.html",
+  "homepage": "https://github.com/valleweb/valle-speed-dial",
   "repository": {
     "type": "git",
-    "url": "git://github.com/valleweb/vsc-fab-speed-dial"
+    "url": "git://github.com/valleweb/valle-speed-dial"
   },
-  "license": "https://github.com/valleweb/vsc-fab-speed-dial/blob/master/LICENSE.md",
+  "license": "https://github.com/valleweb/valle-speed-dial/blob/master/LICENSE.md",
   "ignore": [
     "**/.*",
     "bower_components"
@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0",
-    "vsc-fab-button": "^0.2.1"
+    "valle-fab": "^1.0.0"
   },
   "devDependencies": {
     "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
