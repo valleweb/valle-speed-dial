@@ -94,7 +94,9 @@
   <script>
     class valleSpeedDial extends Polymer.Element {
 
-      static get is() { return 'valle-speed-dial'; }
+      static get is() {
+        return 'valle-speed-dial';
+      }
 
       connectedCallback() {
         super.connectedCallback();
@@ -106,9 +108,9 @@
 
       _toggleShow() {
 
-        this.$.speedDial.style.display == 'none'
-        ? this.setAttribute('open', '')
-        : this.removeAttribute('open')
+        this.$.speedDial.style.display === 'none'
+          ? this.setAttribute('open', '')
+          : this.removeAttribute('open');
 
       }
 
@@ -146,7 +148,7 @@
             type: Boolean,
             value: false
           }
-        }
+        };
       }
 
     }
