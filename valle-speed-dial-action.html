@@ -49,7 +49,9 @@
   <script>
     class vscFabSpeedDialAction extends Polymer.Element {
 
-      static get is() { return 'valle-speed-dial-action'; }
+      static get is() {
+        return 'valle-speed-dial-action';
+      }
 
       connectedCallback() {
         super.connectedCallback();
@@ -66,7 +68,7 @@
             type: String,
             value: ''
           }
-        }
+        };
       }
 
     }
