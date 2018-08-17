@@ -42,7 +42,10 @@
     </style>
 
     <span class="label">[[label]]</span>
-    <valle-fab mini label=[[label]] icon=[[icon]] class="mini-fab"></valle-fab>
+
+    <valle-fab mini label=[[label]] icon=[[icon]] class="mini-fab" sloted=[[sloted]]>
+      <slot></slot>
+    </valle-fab>
 
   </template>
 
@@ -60,6 +63,10 @@
 
       static get properties() {
         return {
+          sloted: {
+            type: Boolean,
+            valur: false
+          },
           label: {
             type: String,
             value: ''

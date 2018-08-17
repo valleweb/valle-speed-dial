@@ -77,6 +77,7 @@ Property          | Type        | Default   | Description
 `label-direction` | *String*    | `''`      | Allow floating label (left / right)
 `label`           | *String*    | `''`      | Text for  floating label and screen readers
 `icon`            | *String*    | `''`      | Custom icon url
+`sloted`          | *Boolean*   | `false`   | Allow inline icon (slot)
 
 ### Styling
 
