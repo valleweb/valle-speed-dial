@@ -1,16 +1,18 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>valle-speed-dial a11y tests</title>
+    <title>valle-speed-dial test</title>
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <script src="../../web-component-tester/browser.js"></script>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/@polymer/test-fixture/test-fixture.js"></script>
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+    <script src="../node_modules/wct-mocha/wct-mocha.js"></script>
 
-    <link rel="import" href="../../polymer/polymer.html">
-    <link rel="import" href="../valle-speed-dial.html">
+    <script type="module" src="../valle-speed-dial.js"></script>
   </head>
   <body>
 
@@ -41,8 +43,6 @@
           expect(fab.getAttribute('aria-haspopup')).to.be.equal('true');
 
         });
-
-        a11ySuite('basicSpeedDial');
 
       });
     </script>

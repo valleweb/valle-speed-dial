@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -6,11 +6,13 @@
 
     <title>valle-speed-dial-action a11y tests</title>
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <script src="../../web-component-tester/browser.js"></script>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/@polymer/test-fixture/test-fixture.js"></script>
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+    <script src="../node_modules/wct-mocha/wct-mocha.js"></script>
 
-    <link rel="import" href="../../polymer/polymer.html">
-    <link rel="import" href="../valle-speed-dial-action.html">
+    <script type="module" src="../valle-speed-dial-action.js"></script>
   </head>
   <body>
 
@@ -34,8 +36,6 @@
           expect(basicSpeedDialAction.getAttribute('role')).to.be.equal('listitem');
 
         });
-
-        a11ySuite('basicSpeedDialAction', ['ariaRoleNotScoped']);
 
       });
     </script>
