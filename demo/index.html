@@ -1,39 +1,34 @@
 <!doctype html>
-
 <html lang="en">
-
   <head>
-    <title>valle-speed-dial demo</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-    <link rel="import" href="../valle-speed-dial.html">
-    <link rel="import" href="../valle-speed-dial-action.html">
-  </head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-  <body>
+    <title>valle-speed-dial demo</title>
+
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <script type="module">
+      import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
+      import '@polymer/iron-demo-helpers/demo-snippet';
+    </script>
+
+    <script type="module" src="../main.js"></script>
 
     <custom-style>
       <style is="custom-style" include="demo-pages-shared-styles">
-        .vertical-section-container {
-          max-width: 500px;
-        }
       </style>
     </custom-style>
+  </head>
 
-    <main class="vertical-section-container centered">
-      <h1>valle-speed-dial demo</h1>
+  <body>
+    <div class="vertical-section-container centered">
+      <h1>All valle-speed-dial demo</h1>
 
-      <!-- Direction down - demo
-      ========================= -->
-
-      <h2>Direction down</h2>
-
-      <demo-snippet class="centered-demo">
+      <!-- Direction down -->
+      <h3>Direction down</h3>
+      <demo-snippet>
         <template>
-
           <style is="custom-style">
             .unicorn {
               --valle-speed-dial-action-fab-color: #d4f442;
@@ -57,66 +52,46 @@
             </valle-speed-dial-action>
 
           </valle-speed-dial>
-
         </template>
       </demo-snippet>
 
-      <!-- Direction up - demo
-      ========================= -->
-
-      <h2>Direction up</h2>
-
-      <demo-snippet class="centered-demo">
+      <!-- Direction up -->
+      <h3>Direction up</h3>
+      <demo-snippet>
         <template>
-
           <valle-speed-dial direction="up">
             <valle-speed-dial-action label="copy" label-direction="left"></valle-speed-dial-action>
             <valle-speed-dial-action label="print" label-direction="left"></valle-speed-dial-action>
           </valle-speed-dial>
-
         </template>
       </demo-snippet>
 
-      <!-- Direction left - demo
-      ========================= -->
-
-      <h2>Direction left</h2>
-
-      <demo-snippet class="centered-demo">
+      <!-- Direction left -->
+      <h3>Direction left</h3>
+      <demo-snippet>
         <template>
-
           <valle-speed-dial direction="left">
             <valle-speed-dial-action></valle-speed-dial-action>
             <valle-speed-dial-action></valle-speed-dial-action>
           </valle-speed-dial>
-
         </template>
       </demo-snippet>
 
-      <!-- Direction right - demo
-      ========================= -->
-
-      <h2>Direction right</h2>
-
-      <demo-snippet class="centered-demo">
+      <!-- Direction right -->
+      <h3>Direction right</h3>
+      <demo-snippet>
         <template>
-
           <valle-speed-dial direction="right">
             <valle-speed-dial-action></valle-speed-dial-action>
             <valle-speed-dial-action></valle-speed-dial-action>
           </valle-speed-dial>
-
         </template>
       </demo-snippet>
 
-      <!-- Inline icon - demo
-      ========================= -->
-
-      <h2>Inline icon</h2>
-
-      <demo-snippet class="centered-demo">
+      <!-- Inline icon -->
+      <h3>Inline icon</h3>
+      <demo-snippet>
         <template>
-
           <valle-speed-dial direction="right">
             <valle-speed-dial-action sloted>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -126,12 +101,9 @@
             </valle-speed-dial-action>
             <valle-speed-dial-action></valle-speed-dial-action>
           </valle-speed-dial>
-
         </template>
       </demo-snippet>
 
-
-    </main>
-
+    </div>
   </body>
 </html>

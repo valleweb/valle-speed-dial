@@ -1,23 +1,28 @@
 # valle-speed-dial
 
-> Awesome valle FAB with Speed Dial
+> Awesome valle-speed-dial - web component using Polymer 3
 
-[![Travis CI Status](https://travis-ci.org/valleweb/valle-speed-dial.svg?branch=master)](https://travis-ci.org/valleweb/valle-speed-dial)
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/valleweb/valle-speed-dial)
+[![npm](https://img.shields.io/npm/v/@valle/valle-speed-dial.svg)](https://www.npmjs.com/package/@valle/valle-speed-dial)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/@valle/valle-speed-dial)
 
 ## How to install and use:
 
-1 - Install the element using [Bower](http://bower.io/):
+1 - Install the element using [Yarn](http://yarn.io/):
 
 ```sh
-$ bower install valle-speed-dial --save
+$ yarn add @valle/valle-speed-dial
 ```
 
-2 -  Import the elements:
+2 -  Import the element:
 
 ```html
-<link rel="import" href="bower_components/valle-speed-dial/valle-speed-dial.html">
-<link rel="import" href="bower_components/valle-speed-dial/valle-speed-dial-action.html">
+<script type="module" src="node_modules/@valle/valle-speed-dial/valle-speed-dial.js"></script>
+```
+
+or in your javascript file
+
+```js
+import "@valle/valle-speed-dial/valle-speed-dial.js";
 ```
 
 3 - Start using it!
@@ -26,13 +31,7 @@ $ bower install valle-speed-dial --save
 ```
 <custom-element-demo>
   <template>
-    <link rel="import" href="valle-speed-dial.html">
-    <link rel="import" href="valle-speed-dial-action.html">
-    <style is="custom-style">
-      valle-speed-dial-action {
-        --valle-speed-dial-action-fab-color: #d4f442;
-      }
-    </style>
+    <script type="module" src="valle-speed-dial.js"></script>
     <next-code-block></next-code-block>
   </template>
 </custom-element-demo>
@@ -40,56 +39,22 @@ $ bower install valle-speed-dial --save
 -->
 
 ```html
-<valle-speed-dial backdrop>
-  <valle-speed-dial-action label="copy" label-direction="left"></valle-speed-dial-action>
-  <valle-speed-dial-action label="print" label-direction="left"></valle-speed-dial-action>
-</valle-speed-dial>
+<valle-speed-dial></valle-speed-dial>
 ```
 
-## `<valle-speed-dial>`
+## Properties
 
-### Properties
+Property  | Type        | Default   | Description
+:---      |:---         |:---       |:---
+`prop1`   | *String*    | `World`   | Prop description
 
-Property    | Type        | Default   | Description
-:---        |:---         |:---       |:---
-`direction` | *String*    | `up`      | Speed Dial direction (up / down / left / right)
-`backdrop`  | *Boolean*   | `false`   | Allow backdrop effect
-`label`     | *String*    | `''`      | Label for screen readers
-`icon`      | *String*    | `''`      | Custom icon url
-
-### Styling
+## Styling
 
 The following custom properties and mixins are available for styling:
 
-Custom property                         | Default        | Description
-:---                                    |:---            |:---
---valle-speed-dial-fab-color          | #00b0ba        | Toggle button background color
---valle-speed-dial-pressed-color      | #00676d        | Toggle button background color (Pressed)
---valle-speed-dial-default-icon-color | #ffffff        | Toggle button default icon color
---valle-speed-dial-backdrop-color     | rgba(0,0,0,.8) | Backdrop color
-
-## `<valle-speed-dial-action>`
-
-### Properties
-
-Property          | Type        | Default   | Description
-:---              |:---         |:---       |:---
-`label-direction` | *String*    | `''`      | Allow floating label (left / right)
-`label`           | *String*    | `''`      | Text for  floating label and screen readers
-`icon`            | *String*    | `''`      | Custom icon url
-`sloted`          | *Boolean*   | `false`   | Allow inline icon (slot)
-
-### Styling
-
-The following custom properties and mixins are available for styling:
-
-Custom property                                | Default  | Description
-:---                                           |:---      |:---
---valle-speed-dial-action-fab-color          | #00b0ba  | Mini button background color
---valle-speed-dial-action-default-icon-color | #ffffff  | Mini button default icon color
---valle-speed-dial-action-label-bg-color     | #f5f5f5  | Float label background color
---valle-speed-dial-action-label-text-color   | #000000  | Float label text color
---valle-speed-dial-action-label              | {}       | Float label `@apply` mixin
+Custom property             | Default                   | Description
+:---                        |:---                       |:---
+--valle-speed-dial-color  | `#fff`                    | Text color
 
 ## Browser Support
 
@@ -101,58 +66,24 @@ Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 11+ | Latest ✔
 
 ## Development
 
-1 - Install [Bower](http://bower.io/) & [Polymer-CLI](https://www.polymer-project.org/1.0/docs/tools/polymer-cli):
+1 - Verify if you have [node](http://nodejs.org/) and [yarn](http://yarn.io/) installed.
+
+2 - Install [Polymer-CLI](https://www.polymer-project.org/3.0/docs/tools/polymer-cli):
 
 ```sh
-$ [sudo] yarn global add bower polymer-cli
+$ [sudo] yarn global add polymer-cli
 ```
 
-2 - Install local dependencies:
+3 - Install local dependencies:
 
 ```sh
-$ bower install
+$ yarn
 ```
 
-3 - Start the development server:
+4 - Start the development server:
 
 ```sh
-$ polymer serve
-```
-
-Go to [localhost:8080/components/valle-speed-dial/](http://localhost:8080/components/valle-speed-dial/)
-
-
-## Tests
-
-#### Linting
-
-Linting with eslint:
-
-```sh
-$ [sudo] yarn global add eslint
-$ [sudo] yarn global add eslint-plugin-html
-
-$ eslint *.html
-```
-
-Linting with polylint:
-
-```sh
-$ polymer lint
-```
-
-#### Unit tests
-
-Install the Web Component Tester (WCT) test runner:
-
-```sh
-$ [sudo] yarn global add web-component-tester
-```
-
-Run tests:
-
-```sh
-$ wct
+$ yarn start
 ```
 
 ## Versioning
