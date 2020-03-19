@@ -1,7 +1,7 @@
 {
   "name": "@valle/valle-speed-dial",
   "description": "Awesome valle-speed-dial - web component using Polymer 3",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
     "valleweb"
   ],
