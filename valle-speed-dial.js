@@ -8,7 +8,7 @@ export default class ValleSpeedDial extends PolymerElement {
         :host {
           display: inline-block;
           position: relative;
-        };
+        }
 
         .fab {
           position: relative;
@@ -16,7 +16,7 @@ export default class ValleSpeedDial extends PolymerElement {
           --valle-fab-color: var(--valle-speed-dial-fab-color, #00b0ba);
           --valle-fab-default-icon-color: var(--valle-speed-dial-default-icon-color, #ffffff);
           --valle-fab-pressed-color: var(--valle-speed-dial-pressed-color, #00676d);
-        };
+        }
 
         .speed-dial {
           padding-left: 0;
@@ -28,28 +28,28 @@ export default class ValleSpeedDial extends PolymerElement {
           bottom: 70px; /* direction up - Default value*/
           display: flex;
           flex-direction: column;
-        };
+        }
 
         :host([direction="down"]) .speed-dial {
           top: 70px;
-        };
+        }
 
         :host([direction="up"]) .speed-dial {
           bottom: 70px;
-        };
+        }
 
         :host([direction="left"]) .speed-dial {
           top: 10px;
           right: 70px;
           flex-direction: row;
-        };
+        }
 
         :host([direction="right"]) .speed-dial {
           top: 10px;
           left: 70px;
           display: flex;
           flex-direction: row;
-        };
+        }
 
         :host(.backdrop[backdrop])::after {
           content: '';
@@ -62,7 +62,7 @@ export default class ValleSpeedDial extends PolymerElement {
           height: 100vh;
           background-color: var(--valle-speed-dial-backdrop-color, rgba(0,0,0,.8));
           animation: fade .2s;
-        };
+        }
 
         @keyframes fade {
           from {

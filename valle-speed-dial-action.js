@@ -8,12 +8,12 @@ export default class ValleSpeedDialAction extends PolymerElement {
         :host {
           display: inline-block;
           position: relative;
-        };
+        }
 
         .mini-fab {
           --valle-fab-color: var(--valle-speed-dial-action-fab-color, #00b0ba);
           --valle-fab-default-icon-color: var(--valle-speed-dial-action-default-icon-color, #ffffff);
-        };
+        }
 
         .label {
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
@@ -26,17 +26,17 @@ export default class ValleSpeedDialAction extends PolymerElement {
           top: 14px;
           display: none;
           /* @apply --valle-speed-dial-action-label; */
-        };
+        }
 
         :host([label-direction="left"]) .label {
           display: inline-block;
           right: 58px;
-        };
+        }
 
         :host([label-direction="right"]) .label {
           display: inline-block;
           right: -58px;
-        };
+        }
       </style>
 
       <span class="label">[[label]]</span>
