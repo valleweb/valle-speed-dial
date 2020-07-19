@@ -68,10 +68,10 @@
   resolved "https://registry.yarnpkg.com/@polymer/test-fixture/-/test-fixture-4.0.2.tgz#2f4777ecdcfb22ee000db35a05e0edf27c722c19"
   integrity sha512-tLX8tFE4mkc4p84YG5239G0hbgTVv2irZYrSyO0OblUqIRbRoCPmbydm3HRFQkJeAB3rPCtyeZ2roJULsmTG3A==
 
-"@valle/valle-fab@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@valle/valle-fab/-/valle-fab-1.0.0.tgz#9e84ec024d6ba5042b9f95af1f1205d383b36817"
-  integrity sha512-D3Zjswtu5rZ8wNsrfCS0RvZH5cY2Yp5F0eTYv7AXFdLLxdvvwNxBe++5cWo7HR11zl0AyYQX6FvE3cYlM3kHCg==
+"@valle/valle-fab@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@valle/valle-fab/-/valle-fab-1.0.1.tgz#a6d18d747a8ee1e3ca68103893bb3efc6af5b9d9"
+  integrity sha512-h7Pn8v7I1t+ZdXkMQW6rGMu9vKi8IPGcGk2xwZnsCtHwz0MCb2hAKLbJ393ZlAPdbu4CJQ0upyGotIXU6wau4A==
   dependencies:
     "@polymer/polymer" "^3.0.0"
 
@@ -429,9 +429,9 @@ locate-path@^3.0.0:
     path-exists "^3.0.0"
 
 lodash@^4.17.15:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
 
 log-symbols@2.2.0:
   version "2.2.0"
