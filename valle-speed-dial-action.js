@@ -25,6 +25,7 @@ export default class ValleSpeedDialAction extends PolymerElement {
           position: absolute;
           top: 14px;
           display: none;
+          white-space: nowrap;
           /* @apply --valle-speed-dial-action-label; */
         }
 
