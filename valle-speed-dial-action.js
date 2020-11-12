@@ -46,11 +46,11 @@ export default class ValleSpeedDialAction extends PolymerElement {
         <slot></slot>
       </valle-fab>
     `;
-	};
-	
-	static get properties() {
-		return {
-			sloted: {
+  };
+
+  static get properties() {
+    return {
+      sloted: {
         type: Boolean,
         valur: false
       },
@@ -62,9 +62,9 @@ export default class ValleSpeedDialAction extends PolymerElement {
         type: String,
         value: ''
       }
-		};
+    };
   };
-  
+
   connectedCallback() {
     super.connectedCallback();
     this.setAttribute('role', 'listitem');

@@ -87,11 +87,11 @@ export default class ValleSpeedDial extends PolymerElement {
         <slot></slot>
       </ul>
     `;
-	};
-	
-	static get properties() {
-		return {
-			label: {
+  };
+
+  static get properties() {
+    return {
+      label: {
         type: String,
         value: ''
       },
@@ -109,7 +109,7 @@ export default class ValleSpeedDial extends PolymerElement {
         type: Boolean,
         value: false
       }
-		};
+    };
   };
   
   connectedCallback() {
